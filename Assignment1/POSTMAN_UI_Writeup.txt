@@ -1,0 +1,56 @@
+POSTMAN UI REST Alterations————————————————————————————————————————————————var jsonData = JSON.parse(responseBody);
+var title = jsonData.items[0].volumeInfo.title;
+console.log("title " + title);
+var patt = /turing/i;
+var res = patt.test(title);
+console.log(res);
+tests["book title1"] = res === true;
+tests["book title"] = responseBody.has("turing");
+tests["total items"] = jsonData.totalItems > 1
+tests["Status code is 200"] = responseCode.code === 200;
+
+Line1) First line we parse the body
+Line2) Second line I store the title in a variable called title
+Line3) Quick console to make sure I have a value 
+Line4) Create a regular expression that is case insensitive for the word turing
+Line5) Test that regular expression against the string value stored in title
+Line6) Quick log to make sure its true
+Line7) Then a test that checks res against the value true
+————————————————————————————————————————————————
+
+POSTMAN UI REST Headers————————————————————————————————————————————————
+1) alt-svc → quic=":443"; ma=604800; v="30,29,28,27,26,25"
+2) alternate-protocol → 443:quic,p=1
+3) cache-control → private, max-age=0, must-revalidate, no-transform
+4) content-encoding → gzip
+5) content-length → 6396
+6) content-type → application/json; charset=UTF-8
+7) date → Wed, 10 Feb 2016 17:42:58 GMT
+8) etag → "3z2GbiG39NRdo416x8jooTTBAqY/q0wLUXPtDrPd2v_O1TxrFEoAe6Q"
+9) expires → Wed, 10 Feb 2016 17:42:58 GMT
+10) server → GSE
+11) status → 200
+12) vary → Origin, X-Origin
+13) x-content-type-options → nosniff
+14) x-frame-options → SAMEORIGIN
+15) x-xss-protection → 1; mode=block
+
+————————————————————————————————————————————————
+Explanations 
+
+1) Alternative services allow origin’s resources to be authoritatively available at a separate network location, possibly accessed with a different protocol configuration
+2) Google QUIC layer on UDP; reduces latency and better stream-multiplexing support
+3) Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds.
+4) The type of encoding used on the data
+5) The length of the response body in octets (8-bit bytes)
+6) The MIME type of this content
+7) The date and time this message was sent
+8) An identifier for a specific version of a resource, often a message digest
+9) Gives the date/time after which the response is considered stale
+10) A name for the server
+11) Status HTTP code of message: “200” the request has succeeded, “400” bad request  
+12) Tells downstream proxies how to match further request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server
+13) The only defined value, “nosniff” prevents Internet Explorer from MIME-sniffing a response away from the declared content-type
+14) Clickjacking protection: “deny” - no rendering within a frame, “sameorign” - no rendering if origin mismatch
+15) Cross-site scripting (XSS) filter
+

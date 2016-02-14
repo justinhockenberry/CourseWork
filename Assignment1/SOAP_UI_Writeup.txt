@@ -1,0 +1,59 @@
+
+SOAP UI Alterations————————————————————————————————————————————————
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGeoIP>
+         <!--Optional:-->
+         
+      <web:IPAddress>212.58.244.68</web:IPAddress></web:GetGeoIP>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetGeoIPResponse xmlns="http://www.webservicex.net/">
+         <GetGeoIPResult>
+            <ReturnCode>1</ReturnCode>
+            <IP>212.58.244.68</IP>
+            <ReturnCodeDetails>Success</ReturnCodeDetails>
+            <CountryName>United Kingdom</CountryName>
+            <CountryCode>GBR</CountryCode>
+         </GetGeoIPResult>
+      </GetGeoIPResponse>
+   </soap:Body>
+</soap:Envelope>
+
+
+
+
+
+
+SOAP UI Headers————————————————————————————————————————————————
+1) Cache-Control	private, max-age=0
+2) Server		Microsoft-IIS/7.0
+3) Content-Encoding	gzip
+4) X-AspNet-Version	4.0.30319
+5) Vary			Accept-Encoding
+6) #status#		HTTP/1.1 200 OK
+7) Content-Length	403
+8) Date			Thu, 04 Feb 2016 00:26:50 GMT
+9) Content-Type		text/xml; charset=utf-8
+10) X-Powered-By	ASP.NET
+————————————————————————————————————————————————
+Explanations 
+
+Line1) Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds.	
+Line2) A name for the server
+Line3) The type of encoding used on the data	
+Line4) PHP Software version	
+Line5) Tells downstream proxies how to match further request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server	
+Line6) 	Status HTTP code of message: “200” the request has succeeded, “400” bad request 	
+Line7) The length of the response body in octets (8-bit bytes)
+Line8) The date and time this message was sent	
+Line9) Content format type	
+Line10) PHP version used	
