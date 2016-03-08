@@ -46,16 +46,16 @@ router.delete('/deletes', function(req, res){
 var onRequest = function(req, res){
    res.write("\nHeaders:\n");
    if(JSON.stringify(req.headers) ==="{}"){
-       res.write("**No headers passed in request**\n");
+       res.write("No headers found\n");
    }
    else{
        res.write(JSON.stringify(req.headers, null, '\t'));
-       res.write('\n'); //can't pass this as part of above or it will be interpreted weird
+       res.write('\n');
    }
    res.write("\nBody:\n");
    
    if(JSON.stringify(req.body) ==="{}"){
-       res.write("**No body passed in request**\n");
+       res.write("No body found\n");
    }
    else{
        res.write(JSON.stringify(req.body, null, '\t'));
@@ -64,7 +64,7 @@ var onRequest = function(req, res){
    res.write("\nQuery Parameters:\n");
 
    if(JSON.stringify(req.query) ==="{}"){
-       res.write("**No query parameters passed in request**\n");
+       res.write("No parameters found\n");
    }
    else{
        res.write(JSON.stringify(req.query, null, '\t'));
