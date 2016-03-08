@@ -9,23 +9,24 @@ var router = express();
 router.use(bodyParser.text());
 router.use(bodyParser.json());
 
-router.get('/gets', function(req, res){
-   
+router.get('/gets', function(req, res)
+{
    onRequest(req, res);
    console.log("GET request");
    res.end("User get reqest has been made\n");
-
+   
 });
 
-router.post('/posts', function(req, res){
-   
+router.post('/posts', function(req, res)
+{
    onRequest(req, res);
    console.log("POST request");
    res.end("\nUser post reqest has been made\n");
 
 });
 
-router.put('/puts', function(req, res){
+router.put('/puts', function(req, res)
+{
    
    onRequest(req, res);
    console.log("PUT request");
@@ -33,7 +34,8 @@ router.put('/puts', function(req, res){
 
 });
 
-router.delete('/deletes', function(req, res){
+router.delete('/deletes', function(req, res)
+{
    
    onRequest(req, res);
    console.log("DELETE request");
@@ -43,36 +45,45 @@ router.delete('/deletes', function(req, res){
 
 
 
-var onRequest = function(req, res){
-   res.write("\nHeaders:\n");
-   if(JSON.stringify(req.headers) ==="{}"){
+var onRequest = function(req, res)
+{
+   
+   res.write("\nRequest has headers:\n");
+   if(JSON.stringify(req.headers) ==="{}")
+   {
        res.write("No headers found\n");
    }
-   else{
+   else
+   {
        res.write(JSON.stringify(req.headers, null, '\t'));
        res.write('\n');
    }
-   res.write("\nBody:\n");
    
-   if(JSON.stringify(req.body) ==="{}"){
+   res.write("\nRequest has body:\n");
+   if(JSON.stringify(req.body) ==="{}")
+   {
        res.write("No body found\n");
    }
-   else{
+   else
+   {
        res.write(JSON.stringify(req.body, null, '\t'));
        res.write('\n');
    }
-   res.write("\nQuery Parameters:\n");
-
-   if(JSON.stringify(req.query) ==="{}"){
+   
+   res.write("\nRequest has parameters:\n");
+   if(JSON.stringify(req.query) ==="{}")
+   {
        res.write("No parameters found\n");
    }
-   else{
+   else
+   {
        res.write(JSON.stringify(req.query, null, '\t'));
        res.write('\n');
    }
 };
 
 
-router.listen(3000, function(){
+router.listen(3000, function()
+{
    console.log("listening on port 3000");
 });
