@@ -1,73 +1,75 @@
+
+
 var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var router = express();
+router.use(bodyParser.text());
+router.use(bodyParser.json());
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+router.get('/gets', function(req, res){
+   
+   onRequest(req, res);
+   console.log("GET request");
+   res.end("User get reqest has been made\n");
 
-var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-// notates files in use
-app.use('/', routes);       //Home directory
-app.use('/users', users);   // users page
-
-/////////////////////////
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
 });
 
-// error handlers
+router.post('/posts', function(req, res){
+   
+   onRequest(req, res);
+   console.log("POST request");
+   res.end("\nUser post reqest has been made\n");
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+});
 
-// production error handler
-// no stack traces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+router.put('/puts', function(req, res){
+   
+   onRequest(req, res);
+   console.log("PUT request");
+   res.end("\nUser put reqest has been made\n");
+
+});
+
+router.delete('/deletes', function(req, res){
+   
+   onRequest(req, res);
+   console.log("DELETE request");
+   res.end("\nUser delete reqest has been made\n");
+
 });
 
 
-module.exports = app;
+
+var onRequest = function(req, res){
+   res.write("\nHeaders:\n");
+   if(JSON.stringify(req.headers) ==="{}"){
+       res.write("**No headers passed in request**\n");
+   }
+   else{
+       res.write(JSON.stringify(req.headers, null, '\t'));
+       res.write('\n'); //can't pass this as part of above or it will be interpreted weird
+   }
+   res.write("\nBody:\n");
+   
+   if(JSON.stringify(req.body) ==="{}"){
+       res.write("**No body passed in request**\n");
+   }
+   else{
+       res.write(JSON.stringify(req.body, null, '\t'));
+       res.write('\n');
+   }
+   res.write("\nQuery Parameters:\n");
+
+   if(JSON.stringify(req.query) ==="{}"){
+       res.write("**No query parameters passed in request**\n");
+   }
+   else{
+       res.write(JSON.stringify(req.query, null, '\t'));
+       res.write('\n');
+   }
+};
+
+
+router.listen(3000, function(){
+   console.log("listening on port 3000");
+});
