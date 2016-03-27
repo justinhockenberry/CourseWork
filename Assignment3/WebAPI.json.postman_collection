@@ -1,0 +1,83 @@
+{
+	"id": "4525f50a-1951-4a38-3b07-5b6d27131551",
+	"name": "WebAPI",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "7e7b1613-0b5f-fd4e-1772-9310e3588ddc",
+			"name": "Project3",
+			"description": "https://UCDenver-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"order": [
+				"8c11fbbd-dfbe-fce5-6ec2-6b4f8b9ce5c4",
+				"2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1"
+			],
+			"owner": "301274",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551"
+		}
+	],
+	"timestamp": 1453940614222,
+	"owner": "301274",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1",
+			"headers": "",
+			"url": "https://api.github.com/?access_token=d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "token",
+					"value": "d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459036489803,
+			"name": "GitHub Token",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "8c11fbbd-dfbe-fce5-6ec2-6b4f8b9ce5c4",
+			"headers": "",
+			"url": "https://jhockenberry-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "mG8lLvay0pDJ2Q8MTkmJw0btxFXnAUbH",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "sqaHmNu1MVbyLDzW",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1457927754032,
+			"name": "https://jhockenberry-test.apigee.net/oauth/client_credential/accesstoken",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		}
+	]
+}
