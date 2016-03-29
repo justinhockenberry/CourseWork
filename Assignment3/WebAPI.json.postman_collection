@@ -10,7 +10,8 @@
 			"description": "https://UCDenver-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
 			"order": [
 				"8c11fbbd-dfbe-fce5-6ec2-6b4f8b9ce5c4",
-				"2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1"
+				"2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1",
+				"cd139e47-e35a-1ccb-cb43-a60bde553836"
 			],
 			"owner": "301274",
 			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551"
@@ -23,8 +24,8 @@
 	"requests": [
 		{
 			"id": "2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1",
-			"headers": "",
-			"url": "https://api.github.com/?access_token=d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+			"headers": "Authorization: Bearer w1rFMz6voGTG5i9oQqMUswrOq5GG\n",
+			"url": "http://jhockenberry-test.apigee.net/v1/githubapi/LetMeIn",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "GET",
@@ -41,8 +42,8 @@
 			"tests": "\n",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459036489803,
-			"name": "GitHub Token",
+			"time": 1459217983563,
+			"name": "GitHub API Path",
 			"description": "",
 			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
 			"responses": []
@@ -78,6 +79,27 @@
 			"description": "",
 			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
 			"responses": []
+		},
+		{
+			"id": "cd139e47-e35a-1ccb-cb43-a60bde553836",
+			"headers": "",
+			"url": "https://api.github.com/users/justinhockenberry",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": null,
+			"dataMode": "params",
+			"name": "GitHub User Account",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459220171566,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7e7b1613-0b5f-fd4e-1772-9310e3588ddc"
 		}
 	]
 }
