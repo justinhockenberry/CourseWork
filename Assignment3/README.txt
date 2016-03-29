@@ -26,5 +26,17 @@ _______Get request from PostMan to Apigee ________
 
 http://jhockenberry-test.apigee.net/v1/githubapi/LetMeIn
 
+Authorization: OAuth 2.0
+
+Auth URL: 		https://jhockenberry-test.apigee.net/oauth/
+Access Token URL:	https://jhockenberry-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials
+
 Client Secret: 	sqaHmNu1MVbyLDzW
 Client ID:	mG8lLvay0pDJ2Q8MTkmJw0btxFXnAUbH
+Scope:		(empty)
+Token Name: 	BearerToken
+Grant Type:	Client Credentials
+
+
+
+
