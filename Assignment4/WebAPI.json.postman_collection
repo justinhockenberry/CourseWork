@@ -1,0 +1,302 @@
+{
+	"id": "4525f50a-1951-4a38-3b07-5b6d27131551",
+	"name": "WebAPI",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "7e7b1613-0b5f-fd4e-1772-9310e3588ddc",
+			"name": "Project3",
+			"description": "https://UCDenver-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"order": [
+				"8c11fbbd-dfbe-fce5-6ec2-6b4f8b9ce5c4",
+				"2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1",
+				"cd139e47-e35a-1ccb-cb43-a60bde553836"
+			],
+			"owner": "301274",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551"
+		},
+		{
+			"id": "8ec26432-1491-3fc5-55da-05d5d92172ac",
+			"name": "Project4",
+			"description": "",
+			"order": [
+				"e08c41e9-f0eb-cce7-eb67-84f528113ad7",
+				"4195916d-6b14-5435-2238-ba4c4ae70138",
+				"c0e2eebb-5aeb-d23a-b813-fc68176bd6e5",
+				"ae7969a9-2c27-cbde-3308-e142f184b2f9",
+				"3efb2b04-5cfb-07a2-3a9a-7e5b361dc349",
+				"f9778ad0-8e62-4953-67dd-cce48c0420ba",
+				"6cd02694-5f31-c6e1-5046-7f71720b2f94",
+				"3e1f79f7-c8aa-e348-afb6-127d06420b81"
+			],
+			"owner": "301274"
+		}
+	],
+	"timestamp": 1453940614222,
+	"owner": "301274",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "2462efa9-0c3c-b6e4-8628-a44a1e4bc1d1",
+			"headers": "Authorization: Bearer w1rFMz6voGTG5i9oQqMUswrOq5GG\n",
+			"url": "http://jhockenberry-test.apigee.net/v1/githubapi/LetMeIn",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "token",
+					"value": "d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459217983563,
+			"name": "GitHub API Path",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "3e1f79f7-c8aa-e348-afb6-127d06420b81",
+			"headers": "",
+			"url": "http://jhockenberry-test.apigee.net/megamoviebox/delete?title=SamSam",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete Movie via Title Request",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1460238840849,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "8ec26432-1491-3fc5-55da-05d5d92172ac"
+		},
+		{
+			"id": "3efb2b04-5cfb-07a2-3a9a-7e5b361dc349",
+			"headers": "Authorization: Basic anVzdGluLmhvY2tlbmJlcnJ5QHVjZGVudmVyLmVkdTpXZWxjb21lMDE=\nContent-Type: application/x-www-form-urlencoded\n",
+			"url": "https://api.enterprise.apigee.com/v1/organizations/jhockenberry/apis/megaMovieBox/revisions/1/npm",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": [
+				{
+					"key": "command",
+					"value": "install",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Install New Packages Apigee",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1460182204181,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "8ec26432-1491-3fc5-55da-05d5d92172ac"
+		},
+		{
+			"id": "4195916d-6b14-5435-2238-ba4c4ae70138",
+			"headers": "",
+			"url": "https://api.usergrid.com/jhockenberry/sandbox/movies?ql=select * where title='Batman'",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "token",
+					"value": "d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460158339682,
+			"name": "Title get request",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "6cd02694-5f31-c6e1-5046-7f71720b2f94",
+			"headers": "Content-Type: application/json\n",
+			"url": "https://api.usergrid.com/jhockenberry/sandbox/movies/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Single Movie Search",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1460234157206,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "8ec26432-1491-3fc5-55da-05d5d92172ac",
+			"rawModeData": "{\n    \"actors\": [\n        {\n          \"fname\": \"Bruce\",\n          \"lname\": \"Wayne\"\n        },\n        {\n          \"fname\": \"The\",\n          \"lname\": \"Joker\"\n        },\n        {\n          \"fname\": \"Two\",\n          \"lname\": \"Face\"\n        }\n    ],\n      \n    \"title\": \"Batman\",\n    \"year\": \"2010\"\n}"
+		},
+		{
+			"id": "8c11fbbd-dfbe-fce5-6ec2-6b4f8b9ce5c4",
+			"headers": "",
+			"url": "https://jhockenberry-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "mG8lLvay0pDJ2Q8MTkmJw0btxFXnAUbH",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "sqaHmNu1MVbyLDzW",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1457927754032,
+			"name": "https://jhockenberry-test.apigee.net/oauth/client_credential/accesstoken",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "ae7969a9-2c27-cbde-3308-e142f184b2f9",
+			"headers": "//Content-Type: application/json\ntitle: \nyear: \nfname: \nlname: \n",
+			"url": "http://jhockenberry-test.apigee.net/megamoviebox/post",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460176858629,
+			"name": "Movie Posting",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "c0e2eebb-5aeb-d23a-b813-fc68176bd6e5",
+			"headers": "",
+			"url": "http://jhockenberry-test.apigee.net/megamoviebox/get?title_specific=t&title=Batman",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460253128959,
+			"name": "Get Request for Movie Title",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		},
+		{
+			"id": "cd139e47-e35a-1ccb-cb43-a60bde553836",
+			"headers": "",
+			"url": "https://api.github.com/users/justinhockenberry",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": null,
+			"dataMode": "params",
+			"name": "GitHub User Account",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459220171566,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "7e7b1613-0b5f-fd4e-1772-9310e3588ddc"
+		},
+		{
+			"id": "e08c41e9-f0eb-cce7-eb67-84f528113ad7",
+			"headers": "",
+			"url": "https://api.usergrid.com/jhockenberry/sandbox/movies/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"data": [
+				{
+					"key": "token",
+					"value": "d4a1f1242da813c3930c0c9439c50b5b6657ff89",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "main get request",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1460155363385,
+			"version": 2,
+			"responses": [],
+			"tests": "\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "8ec26432-1491-3fc5-55da-05d5d92172ac"
+		},
+		{
+			"id": "f9778ad0-8e62-4953-67dd-cce48c0420ba",
+			"headers": "",
+			"url": "http://jhockenberry-test.apigee.net/megamoviebox/get?title_specific=t&title=Batman",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460253118811,
+			"name": "Parsed Search",
+			"description": "",
+			"collectionId": "4525f50a-1951-4a38-3b07-5b6d27131551",
+			"responses": []
+		}
+	]
+}
