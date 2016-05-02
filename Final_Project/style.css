@@ -1,0 +1,54 @@
+.content {
+    position: relative
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    padding: 10px;
+    clear: both;
+}
+
+ul{
+    list-style-type: none;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+}​
+.cart {
+}
+.item {
+    margin:15px 40px;
+}
+.itemThumb {
+    max-width: 70px ;
+    padding: 10px;
+
+}
+.quantityItem, .priceItem {
+    clear: both;
+    padding: 15px;
+}
+
+.titleItem {
+    font-weight: 600;
+    font-size: 19px;
+    margin: 0 15px;
+    padding-right:10px;
+}
+
+.price {
+    color: red;
+}
+img {
+    max-height: 150px;
+}
+
+input[type="number"] {
+    width:50px;
+}
+
+.form-control {
+    /*width: 160px;*/
+}
